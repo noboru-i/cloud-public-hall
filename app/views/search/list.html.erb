@@ -1,4 +1,4 @@
-<div>TOP > <%= @params[:keyword] %>,<%= @params[:place] %></div>
+<div>TOP > <%= @params[:keyword].present? ? @params[:keyword] : '(キーワード指定無し)' %>,<%= @params[:place].present? ? @params[:place] : '(場所指定無し)' %></div>
 <h2><%= @halls.count %>件見つかりました</h2>
 <div class="col-md-6">
   <% @halls.each_with_index do |hall, index| %>
