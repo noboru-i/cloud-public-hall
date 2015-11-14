@@ -4,18 +4,28 @@
   <li class="menu_item"><a href="">施設概要</a></li>
   <li class="menu_item"><a href="">写真</a></li>
   <li class="menu_item"><a href="">空室情報</a></li>
-  <li class="menu_item"><a href="">地図</a></li>
+  <li class="menu_item"><a href="#" id="show_map" data-address="<%= @hall.address %>">地図</a></li>
 </ul>
 
-<ul style="display: flex;">
-  <li><%= image_tag('http://www.city.atsugi.kanagawa.jp/facilities/city/center/p004086_d/img/002.JPG', size: '256x256') %></li>
-  <li><%= image_tag('http://www.city.atsugi.kanagawa.jp/facilities/city/center/p004086_d/img/002.JPG', size: '256x256') %></li>
-</ul>
+<div id="overview_container">
+  <ul style="display: flex;">
+    <li><%= image_tag('http://www.city.atsugi.kanagawa.jp/facilities/city/center/p004086_d/img/002.JPG', size: '256x256') %></li>
+    <li><%= image_tag('http://www.city.atsugi.kanagawa.jp/facilities/city/center/p004086_d/img/002.JPG', size: '256x256') %></li>
+  </ul>
 
-<ul>
-  <li>住所：<%= @hall.address %></li>
-  <li>連絡先(TEL)：<%= @hall.tel %></li>
-  <li>連絡先(email)：<%= mail_to @hall.email %></li>
-  <li>広さ：<%= @hall.tatami_num %>畳</li>
-  <li>駐車場：10台程度</li>
-</ul>
+  <ul>
+    <li>住所：<%= @hall.address %></li>
+    <li>連絡先(TEL)：<%= @hall.tel %></li>
+    <li>連絡先(email)：<%= mail_to @hall.email %></li>
+    <li>広さ：<%= @hall.tatami_num %>畳</li>
+    <li>駐車場：10台程度</li>
+  </ul>
+</div>
+
+<div id="map_container" style="display: none;">
+  <div id="map" style="width: 480px; height: 480px;"></div>
+</div>
+
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNorB-sgLibKoKaHFNX-inr3PI0TnFXNA">
+</script>
