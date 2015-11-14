@@ -1,0 +1,22 @@
+<h1>クラウド公民館</h1>
+
+<div>
+  <h2>検索</h2>
+  <%= form_tag('/search') do %>
+    <%= text_field :search, :keyword %>
+    <%= text_field :search, :place %>
+    <%= submit_tag '検索' %>
+  <% end %>
+</div>
+
+<div>
+  <h2>地図</h2>
+  <%= image_tag 'http://www.mapfan.com/japanmap/map/16.gif' %>
+</div>
+
+<div>
+  <h2>一覧</h2>
+  <%= link_to '公民館1', controller: 'details', action: "index", id: 1 %>
+  <%= link_to '公民館2', controller: 'details', action: "index", id: 2 %>
+  <%= link_to '公民館3', controller: 'details', action: "index", id: 3 %>
+</div>
