@@ -3,3 +3,12 @@
 <% @halls.each_with_index do |hall, index| %>
   <%= render partial: "partials/hall_list_item", locals: {hall: hall, index: index + 1} %>
 <% end %>
+
+<div id="map" style="width: 360px; height: 360px;"></div>
+
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNorB-sgLibKoKaHFNX-inr3PI0TnFXNA&callback=initMap">
+</script>
+<script>
+halls = <%= @halls.to_json.html_safe %>
+</script>
