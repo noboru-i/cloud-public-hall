@@ -1,2 +1,5 @@
-<h1>Search#list</h1>
-<p>Find me in app/views/search/list.html.erb</p>
+<h1>検索結果</h1>
+<h2>X件見つかりました</h2>
+<% (1..3).each do %>
+<%= render partial: "partials/hall_list_item", locals: {} %>
+<% end %>
