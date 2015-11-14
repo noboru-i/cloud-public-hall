@@ -1,4 +1,6 @@
-== README
+# クラウド公民館
+
+## README
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
@@ -27,7 +29,7 @@ Things you may want to cover:
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
 
-やること
+## やること
 
 ```
 bin/rake db:migrate:reset RAILS_ENV=development
