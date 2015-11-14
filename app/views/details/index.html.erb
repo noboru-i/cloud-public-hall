@@ -1,10 +1,10 @@
-<h1>XXX公民館</h1>
+<h1><%= @hall.name %></h1>
 
 <ul style="display: flex;">
-  <li><a href="">施設概要</a></li>
-  <li><a href="">写真</a></li>
-  <li><a href="">空室情報</a></li>
-  <li><a href="">地図</a></li>
+  <li class="menu_item"><a href="">施設概要</a></li>
+  <li class="menu_item"><a href="">写真</a></li>
+  <li class="menu_item"><a href="">空室情報</a></li>
+  <li class="menu_item"><a href="">地図</a></li>
 </ul>
 
 <ul style="display: flex;">
@@ -13,7 +13,9 @@
 </ul>
 
 <ul>
-  <li>住所：富山県富山市XXX NN-NN</li>
-  <li>連絡先：080-1234-5678</li>
+  <li>住所：<%= @hall.address %></li>
+  <li>連絡先(TEL)：<%= @hall.tel %></li>
+  <li>連絡先(email)：<%= mail_to @hall.email %></li>
+  <li>広さ：<%= @hall.tatami_num %>畳</li>
   <li>駐車場：10台程度</li>
 </ul>
