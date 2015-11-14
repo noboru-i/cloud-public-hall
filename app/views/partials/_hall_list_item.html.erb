@@ -1,12 +1,15 @@
-<div class="link_to_detail" data-url="<%= details_path(hall.id) %>">
-  <div>
-    <span class="hall_num"><%= index %></span>
-    <span class="hall_name"><%= hall.name %></span>
+<div class="link_to_detail" data-url="<%= details_path(hall.id) %>"
+  style="display: flex;">
+  <div style="margin-right: auto;">
+    <h3>
+      <span class="hall_num"><%= index %></span>.
+      <span class="hall_name"><%= hall.name %></span>
+    </h3>
+    <div>
+      <span><%= hall.address %></span>
+    </div>
   </div>
   <div>
-    <span><%= hall.address %></span>
-  </div>
-  <div>
-    <%= image_tag('http://www.city.atsugi.kanagawa.jp/facilities/city/center/p004086_d/img/002.JPG', size: '256x256') %>
+    <%= image_tag('http://www.city.atsugi.kanagawa.jp/facilities/city/center/p004086_d/img/002.JPG', size: '128x128') %>
   </div>
 </div>

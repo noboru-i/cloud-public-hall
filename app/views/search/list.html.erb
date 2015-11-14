@@ -1,10 +1,13 @@
-<h1>検索結果</h1>
+<div>TOP > <%= @params[:keyword] %>,<%= @params[:place] %></div>
 <h2><%= @halls.count %>件見つかりました</h2>
-<% @halls.each_with_index do |hall, index| %>
-  <%= render partial: "partials/hall_list_item", locals: {hall: hall, index: index + 1} %>
-<% end %>
+<div class="col-md-6">
+  <% @halls.each_with_index do |hall, index| %>
+    <%= render partial: "partials/hall_list_item", locals: {hall: hall, index: index + 1} %>
+  <% end %>
+</div>
 
-<div id="map" style="width: 360px; height: 360px;"></div>
+<div id="map" class="col-md-4" style="width: 360px; height: 360px;">
+</div>
 
 <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNorB-sgLibKoKaHFNX-inr3PI0TnFXNA&callback=initMap">

@@ -1,5 +1,3 @@
-console.log 'test'
-
 $(document).on 'click', '.link_to_detail', (event) ->
   location.href = $(this).data('url')
   return
