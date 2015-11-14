@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-  get 'search/list'
-
   root 'welcomes#index'
 
-  get 'details/:id' => 'details#index'
+  get 'details/:id' => 'details#index', as: :details
 
   get 'search/list'
 end
