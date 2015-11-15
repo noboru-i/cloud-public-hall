@@ -3,17 +3,65 @@
 <div>
   <h2>検索</h2>
   <%= form_tag({controller: 'search', action: 'list'}, method: 'get') do %>
-    <%= text_field :search, :keyword %>
-    <%= text_field :search, :place %>
+    <%= text_field :search, :keyword, :placeholder => 'キーワード' %>
+    <%= text_field :search, :place, :placeholder => '場所' %>
     <%= submit_tag '検索' %>
   <% end %>
 </div>
-
-<div>
+<div class="well" style="float: left; margin-top: 30px;">
   <h2>地図</h2>
-  <%= image_tag 'http://www.mapfan.com/japanmap/map/16.gif' %>
-</div>
+<%= image_tag 'http://www.mapfan.com/japanmap/map/16.gif' %>
+  <div style="float: right; padding-left: 40px;">
+  <table>
+    <tr>
+      <td>
+        <ul>
+          <li>
+        <%= link_to "朝日町","/search/list" %>
+          </li>
+            <br>
+        <%= link_to "射水市","/search/list" %>
+        <br>
+        <%= link_to "魚津市","/search/list" %>
+        <br>
+        <%= link_to "小矢部市","/search/list" %>
+        <br>
+        <%= link_to "上市町","/search/list" %>
+        <br>
+        <%= link_to "黒部市","/search/list" %>
+        <br>
+        <%= link_to "高岡市","/search/list" %>
+        <br>
+        <%= link_to "立山町","/search/list" %>
+        <br>
+        <%= link_to "砺波市","/search/list" %>
+        <br>
+        <%= link_to "富山市","/search/list" %>
+        <br>
+        <%= link_to "滑川市","/search/list" %>
+        <br>
+        <%= link_to "南砺市","/search/list" %>
+        <br>
+        <%= link_to "氷見市","/search/list" %>
+        <br>
+        <%= link_to "船橋村","/search/list" %>
+        </ul>
+      </td>
+    </tr>
 
+  </table>
+  </div>
+</div>
+<!--<div style="float: left;">-->
+
+
+
+
+<!--</div>-->
+
+<div style="clear:both">
+  <h2>市町村別</h2>
+</div>
 <div>
   <h2>一覧</h2>
   <% @halls.each_with_index do |hall, index| %>
