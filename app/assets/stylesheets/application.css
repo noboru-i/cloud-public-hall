@@ -20,6 +20,9 @@ ul {
 a {
   color: white;
 }
+td a {
+  color: #3F51B5;
+}
 
 .hall_card {
   border-radius: 2px;

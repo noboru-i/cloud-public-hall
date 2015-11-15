@@ -15,37 +15,11 @@
   <table>
     <tr>
       <td>
-        <ul>
-          <li>
-        <%= link_to "朝日町","/search/list" %>
-          </li>
-            <br>
-        <%= link_to "射水市","/search/list" %>
-        <br>
-        <%= link_to "魚津市","/search/list" %>
-        <br>
-        <%= link_to "小矢部市","/search/list" %>
-        <br>
-        <%= link_to "上市町","/search/list" %>
-        <br>
-        <%= link_to "黒部市","/search/list" %>
-        <br>
-        <%= link_to "高岡市","/search/list" %>
-        <br>
-        <%= link_to "立山町","/search/list" %>
-        <br>
-        <%= link_to "砺波市","/search/list" %>
-        <br>
-        <%= link_to "富山市","/search/list" %>
-        <br>
-        <%= link_to "滑川市","/search/list" %>
-        <br>
-        <%= link_to "南砺市","/search/list" %>
-        <br>
-        <%= link_to "氷見市","/search/list" %>
-        <br>
-        <%= link_to "船橋村","/search/list" %>
-        </ul>
+        <% place_list = ['朝日町', '射水市', '魚津市', "小矢部市","上市町","黒部市","高岡市","立山町","砺波市","富山市","滑川市","南砺市","氷見市","船橋村"] %>
+        <% place_list.each do |place| %>
+          <%= link_to place, controller: 'search', action: "list", search: {place: place} %>
+          <br>
+        <% end %>
       </td>
     </tr>
 
