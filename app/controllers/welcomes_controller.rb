@@ -1,6 +1,6 @@
 class WelcomesController < ApplicationController
 
   def index
-    @halls = Hall.all
+    @halls = Hall.limit(5)
   end
 end
